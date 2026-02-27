@@ -131,13 +131,13 @@ jobs:
       - name: Push to Jozu Hub
         if: steps.policy.outputs.result == 'PASS'
         run: |
-          kit tag local/fraud:${{ github.sha }} jozu.ml/arnabchat2001/kitops-governance-demo:${{ github.sha }}
-          kit tag local/fraud:${{ github.sha }} jozu.ml/arnabchat2001/kitops-governance-demo:latest
+          kit tag local/fraud:${{ github.sha }} jozu.ml/shivaylamba/kitops-governance-demo:${{ github.sha }}
+          kit tag local/fraud:${{ github.sha }} jozu.ml/shivaylamba/kitops-governance-demo:latest
           
-          kit push jozu.ml/arnabchat2001/kitops-governance-demo:${{ github.sha }}
-          kit push jozu.ml/arnabchat2001/kitops-governance-demo:latest
+          kit push jozu.ml/shivaylamba/kitops-governance-demo:${{ github.sha }}
+          kit push jozu.ml/shivaylamba/kitops-governance-demo:latest
           
-          echo "Pushed to: https://jozu.ml/arnabchat2001/kitops-governance-demo"
+          echo "Pushed to: https://jozu.ml/shivaylamba/kitops-governance-demo"
 
       - name: Setup Cosign
         if: steps.policy.outputs.result == 'PASS'
@@ -156,7 +156,7 @@ jobs:
         env:
           COSIGN_EXPERIMENTAL: "true"
         run: |
-          IMAGE_REF="jozu.ml/arnabchat2001/kitops-governance-demo:${{ github.sha }}"
+          IMAGE_REF="jozu.ml/shivaylamba/kitops-governance-demo:${{ github.sha }}"
           cosign attest --yes \
             --predicate "${{ steps.policy.outputs.policy_summary_path }}" \
             --type "https://jozu.com/attestations/kitops-governance/v1" \
