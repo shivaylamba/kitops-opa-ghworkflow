@@ -3,6 +3,7 @@
 Real CI/CD governance gates with **KitOps + OPA + Cosign attestations**.
 
 [![Governance Gate](https://github.com/arnab2001/KitOps-kitops-governance-demo/actions/workflows/main.yml/badge.svg)](https://github.com/arnab2001/KitOps-kitops-governance-demo/actions/workflows/main.yml)
+[![Packaged with KitOps](https://img.shields.io/badge/Packaged%20with-KitOps-FFAF52?labelColor=363636)](https://kitops.org)
 
 ## What This Shows
 
